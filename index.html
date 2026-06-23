@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubAssist — Privacy Policy</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a1628;
+            color: #c8d8e8;
+            line-height: 1.7;
+            padding: 24px 16px 48px;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            padding: 40px 0 32px;
+            border-bottom: 1px solid #1e3050;
+            margin-bottom: 32px;
+        }
+        .logo {
+            width: 72px; height: 72px;
+            background: #0d2d40;
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 36px;
+        }
+        h1 { color: #e8f4f0; font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+        .subtitle { color: #6b8fa8; font-size: 14px; }
+        .updated { color: #4a9e82; font-size: 13px; margin-top: 8px; }
+        h2 {
+            color: #4a9e82;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 28px 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        p { color: #a8c0d0; margin-bottom: 12px; font-size: 15px; }
+        ul { margin: 8px 0 12px 20px; }
+        li { color: #a8c0d0; margin-bottom: 6px; font-size: 15px; }
+        .card {
+            background: #0f1e30;
+            border: 1px solid #1e3050;
+            border-radius: 14px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+        .card h3 { color: #c8e8e0; font-size: 15px; margin-bottom: 8px; }
+        .highlight { color: #4a9e82; font-weight: 600; }
+        .contact-link { color: #4a9e82; text-decoration: none; }
+        .contact-link:hover { text-decoration: underline; }
+        .footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #1e3050;
+            color: #4a6070;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <div class="logo">🛡️</div>
+        <h1>SubAssist</h1>
+        <div class="subtitle">Privacy Policy</div>
+        <div class="updated">Last updated: June 22, 2026</div>
+    </div>
+
+    <p>
+        SubAssist ("we", "our", "the app") is developed by SubSave Studio
+        (<a class="contact-link" href="mailto:studio.subsave@gmail.com">studio.subsave@gmail.com</a>).
+        This Privacy Policy explains what data the app accesses, how it is used, and your rights.
+    </p>
+
+    <h2>1. Data We Access</h2>
+
+    <div class="card">
+        <h3>📁 Files and Media</h3>
+        <p>
+            SubAssist can read file metadata (names, sizes, modification dates) from your device storage
+            to perform storage audits — finding duplicates and large files.
+            <span class="highlight">Files are processed entirely on-device and never uploaded anywhere.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>📱 Installed Applications</h3>
+        <p>
+            The app reads the list of installed applications and their declared permissions
+            to generate a security audit report.
+            <span class="highlight">This data stays on your device.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🔔 Notifications (optional)</h3>
+        <p>
+            If you grant Notification Listener access, SubAssist can read notification metadata
+            (app name, title) to help identify subscription services.
+            <span class="highlight">Notification content is never stored or transmitted.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>⏱ Usage Statistics (optional)</h3>
+        <p>
+            With your permission, the app reads Android UsageStats to show screen-time summaries.
+            <span class="highlight">This data is only displayed to you and never leaves your device.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🤖 AI Provider (optional)</h3>
+        <p>
+            If you choose a cloud AI provider (Gemini, Claude, OpenRouter), your chat messages
+            are sent to that provider's API. We do not store these messages on our servers.
+            Please review the privacy policy of the AI provider you select.<br><br>
+            If you use the <span class="highlight">on-device Gemma model</span>, no data is sent anywhere.
+        </p>
+    </div>
+
+    <h2>2. Data We Do NOT Collect</h2>
+    <ul>
+        <li>We do not collect personal information (name, email, phone number)</li>
+        <li>We do not use advertising SDKs or analytics trackers</li>
+        <li>We do not sell or share your data with third parties</li>
+        <li>We do not store your files or media on any server</li>
+        <li>We do not track your location</li>
+    </ul>
+
+    <h2>3. API Keys</h2>
+    <p>
+        If you enter an API key for a cloud AI provider, it is stored locally on your device
+        using Android's encrypted DataStore. It is never transmitted to SubSave Studio's servers.
+    </p>
+
+    <h2>4. Permissions Explained</h2>
+    <ul>
+        <li><strong>READ_MEDIA_IMAGES / READ_MEDIA_VIDEO / READ_EXTERNAL_STORAGE</strong> — storage audit</li>
+        <li><strong>PACKAGE_USAGE_STATS</strong> — screen time statistics (user must grant manually)</li>
+        <li><strong>BIND_NOTIFICATION_LISTENER_SERVICE</strong> — subscription detection via notifications (optional)</li>
+        <li><strong>INTERNET / ACCESS_NETWORK_STATE</strong> — cloud AI provider communication</li>
+        <li><strong>POST_NOTIFICATIONS</strong> — local reminders for scheduled scans</li>
+    </ul>
+
+    <h2>5. Third-Party Services</h2>
+    <p>SubAssist may optionally connect to the following external AI APIs based on your choice:</p>
+    <ul>
+        <li><a class="contact-link" href="https://ai.google.dev/terms" target="_blank">Google Gemini API</a></li>
+        <li><a class="contact-link" href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropic Claude API</a></li>
+        <li><a class="contact-link" href="https://openrouter.ai/privacy" target="_blank">OpenRouter</a></li>
+    </ul>
+    <p>These connections only occur when you actively send a message in the AI chat.</p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>
+        SubAssist is not directed at children under 13. We do not knowingly collect
+        any information from children.
+    </p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>
+        We may update this policy from time to time. The updated version will always be
+        available at this URL. Continued use of the app after changes constitutes acceptance.
+    </p>
+
+    <h2>8. Contact</h2>
+    <p>
+        Questions about this Privacy Policy? Contact us at:<br>
+        <a class="contact-link" href="mailto:studio.subsave@gmail.com">studio.subsave@gmail.com</a>
+    </p>
+
+    <div class="footer">
+        © 2026 SubSave Studio · SubAssist · All rights reserved
+    </div>
+
+</div>
+</body>
+</html>
