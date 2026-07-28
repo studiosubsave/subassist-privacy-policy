@@ -70,7 +70,7 @@
         <div class="logo">🛡️</div>
         <h1>SubAssist</h1>
         <div class="subtitle">Privacy Policy</div>
-        <div class="updated">Last updated: June 22, 2026</div>
+        <div class="updated">Last updated: July 27, 2026</div>
     </div>
 
     <p>
@@ -126,13 +126,36 @@
         </p>
     </div>
 
+    <div class="card">
+        <h3>🛡️ Fraud Shield — QR &amp; URL Scanning</h3>
+        <p>
+            When you scan a QR code, the app checks the URL against on-device heuristics and,
+            if configured, the <strong>Google Safe Browsing API</strong> to detect malicious or
+            phishing links. The scanned URL is sent to Google for this check; no other data
+            (device identifiers, personal information) is included.
+            <span class="highlight">Scan results are stored locally on your device.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>📶 Fraud Shield — Wi-Fi Network Protection (optional)</h3>
+        <p>
+            If you enable "Wi-Fi network protection" in Settings, SubAssist reads the name (SSID)
+            and identifier (BSSID) of the Wi-Fi network you connect to, to warn you about possible
+            spoofed access points ("evil-twin" attacks). Android requires precise location
+            permission to read this information, but
+            <span class="highlight">the app does not determine, store, or transmit your geographic location.</span>
+            This feature is off by default and only activates if you explicitly turn it on.
+        </p>
+    </div>
+
     <h2>2. Data We Do NOT Collect</h2>
     <ul>
         <li>We do not collect personal information (name, email, phone number)</li>
         <li>We do not use advertising SDKs or analytics trackers</li>
         <li>We do not sell or share your data with third parties</li>
         <li>We do not store your files or media on any server</li>
-        <li>We do not track your location</li>
+        <li>We do not use GPS or determine your geographic location. The optional Wi-Fi network protection feature only reads the Wi-Fi network name/identifier, not your coordinates (see Section 1)</li>
     </ul>
 
     <h2>3. API Keys</h2>
@@ -148,6 +171,9 @@
         <li><strong>BIND_NOTIFICATION_LISTENER_SERVICE</strong> — subscription detection via notifications (optional)</li>
         <li><strong>INTERNET / ACCESS_NETWORK_STATE</strong> — cloud AI provider communication</li>
         <li><strong>POST_NOTIFICATIONS</strong> — local reminders for scheduled scans</li>
+        <li><strong>CAMERA</strong> — Fraud Shield QR code scanning</li>
+        <li><strong>ACCESS_WIFI_STATE</strong> — Fraud Shield Wi-Fi network protection (optional)</li>
+        <li><strong>ACCESS_FINE_LOCATION</strong> — required by Android to read the Wi-Fi network name for Fraud Shield's optional protection feature; not used to determine your location (user must enable manually in Settings)</li>
     </ul>
 
     <h2>5. Third-Party Services</h2>
@@ -156,6 +182,7 @@
         <li><a class="contact-link" href="https://ai.google.dev/terms" target="_blank">Google Gemini API</a></li>
         <li><a class="contact-link" href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropic Claude API</a></li>
         <li><a class="contact-link" href="https://openrouter.ai/privacy" target="_blank">OpenRouter</a></li>
+        <li><a class="contact-link" href="https://policies.google.com/privacy" target="_blank">Google Safe Browsing</a> (Fraud Shield QR/URL scanning)</li>
     </ul>
     <p>These connections only occur when you actively send a message in the AI chat.</p>
 
