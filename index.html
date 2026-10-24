@@ -158,8 +158,8 @@
         <p>
             If you choose a cloud AI provider (Gemini, Claude, OpenRouter), your chat messages
             are sent to that provider's API. To give device-specific advice, the request also includes a short
-            device status summary: storage usage, battery level, temperature and charging state, and the number
-            of installed apps (no app names, files or personal identifiers). This happens only after you enable
+            device status summary: device model, Android version, storage and RAM usage, battery level, temperature
+            and charging state, and the number of installed apps (no app names, files or personal identifiers). This happens only after you enable
             "Send data to AI provider" in Settings → Privacy &amp; Access, and you can turn it off at any time.
             We do not store these messages on our servers.
             Please review the privacy policy of the AI provider you select.<br><br>
@@ -227,7 +227,7 @@
         <li><strong>RECEIVE_BOOT_COMPLETED</strong> — restores that optional notification request after the device restarts</li>
         <li><strong>CAMERA</strong> — Fraud Shield QR code scanning</li>
         <li><strong>ACCESS_WIFI_STATE</strong> — Fraud Shield Wi-Fi network protection (optional)</li>
-        <li><strong>ACCESS_FINE_LOCATION</strong> — required by Android to read the Wi-Fi network name for Fraud Shield's optional protection feature; not used to determine your location (user must enable manually in Settings)</li>
+        <li><strong>ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION</strong> — required by Android to read the Wi-Fi network name for Fraud Shield's optional protection feature; not used to determine your location (user must enable manually in Settings)</li>
     </ul>
 
     <h2>5. Third-Party Services</h2>
@@ -331,9 +331,9 @@
         <p>
             Если вы выбираете облачного поставщика ИИ (Gemini, Claude, OpenRouter), ваши сообщения в чате
             отправляются в API этого поставщика. Чтобы давать советы с учётом устройства, запрос также содержит краткую
-            сводку о состоянии устройства: заполненность хранилища, уровень заряда, температуру и состояние зарядки батареи,
-            а также количество установленных приложений (без названий приложений, файлов и личных идентификаторов).
-            Это происходит только после того, как вы включите «Передача данных AI-провайдеру»
+            сводку о состоянии устройства: модель устройства, версию Android, заполненность хранилища и оперативной памяти,
+            уровень заряда, температуру и состояние зарядки батареи, а также количество установленных приложений (без названий приложений, файлов и личных идентификаторов).
+            Это происходит только после того, как вы включите «Отправка данных ИИ-провайдеру»
             в Настройки → Конфиденциальность и доступ, и вы можете отключить это в любой момент.
             Мы не храним эти сообщения на своих серверах.
             Ознакомьтесь с политикой конфиденциальности выбранного поставщика ИИ.<br><br>
@@ -401,7 +401,7 @@
         <li><strong>RECEIVE_BOOT_COMPLETED</strong> — восстанавливает этот необязательный запрос на уведомление после перезагрузки устройства</li>
         <li><strong>CAMERA</strong> — сканирование QR-кодов в Fraud Shield</li>
         <li><strong>ACCESS_WIFI_STATE</strong> — защита Wi-Fi в Fraud Shield (необязательно)</li>
-        <li><strong>ACCESS_FINE_LOCATION</strong> — требуется Android для чтения названия сети Wi-Fi в необязательной защите Fraud Shield; не используется для определения вашего местоположения (пользователь включает вручную в Настройках)</li>
+        <li><strong>ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION</strong> — требуется Android для чтения названия сети Wi-Fi в необязательной защите Fraud Shield; не используется для определения вашего местоположения (пользователь включает вручную в Настройках)</li>
     </ul>
 
     <h2>5. Сторонние сервисы</h2>
@@ -450,3 +450,4 @@
 </div>
 </body>
 </html>
+
