@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubAssist — Privacy Policy</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a1628;
+            color: #c8d8e8;
+            line-height: 1.7;
+            padding: 24px 16px 48px;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            padding: 40px 0 32px;
+            border-bottom: 1px solid #1e3050;
+            margin-bottom: 32px;
+        }
+        .logo {
+            width: 72px; height: 72px;
+            background: #0d2d40;
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 36px;
+        }
+        h1 { color: #e8f4f0; font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+        .subtitle { color: #6b8fa8; font-size: 14px; }
+        .updated { color: #4a9e82; font-size: 13px; margin-top: 8px; }
+        h2 {
+            color: #4a9e82;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 28px 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        p { color: #a8c0d0; margin-bottom: 12px; font-size: 15px; }
+        ul { margin: 8px 0 12px 20px; }
+        li { color: #a8c0d0; margin-bottom: 6px; font-size: 15px; }
+        .card {
+            background: #0f1e30;
+            border: 1px solid #1e3050;
+            border-radius: 14px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+        .card h3 { color: #c8e8e0; font-size: 15px; margin-bottom: 8px; }
+        .highlight { color: #4a9e82; font-weight: 600; }
+        .contact-link { color: #4a9e82; text-decoration: none; }
+        .contact-link:hover { text-decoration: underline; }
+        .footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #1e3050;
+            color: #4a6070;
+            font-size: 13px;
+        }
+
+        .langbar { position: fixed; top: 12px; right: 12px; display: flex; gap: 4px; z-index: 10;
+            background: #0f1e30; border: 1px solid #1e3050; border-radius: 10px; padding: 4px; }
+        .langbar a { color: #6b8fa8; text-decoration: none; font-size: 13px; font-weight: 600;
+            padding: 4px 10px; border-radius: 7px; }
+        .langbar a.active { background: #4a9e82; color: #0a1628; }
+        html:not([data-lang="ru"]) .l-ru { display: none; }
+        html[data-lang="ru"] .l-en { display: none; }
+    </style>
+<script>
+(function () {
+    var lang = null;
+    try { lang = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+    if (lang !== 'ru' && lang !== 'en') {
+        try { lang = localStorage.getItem('lang'); } catch (e) {}
+    }
+    if (lang !== 'ru' && lang !== 'en') {
+        lang = /^ru|^uk|^be/i.test(navigator.language || '') ? 'ru' : 'en';
+    }
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.lang = lang;
+    document.title = lang === 'ru' ? 'SubAssist — Политика конфиденциальности' : 'SubAssist — Privacy Policy';
+    window.setLang = function (l) {
+        try { localStorage.setItem('lang', l); } catch (e) {}
+        location.search = '?lang=' + l;
+    };
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.langbar a').forEach(function (a) {
+            if (a.dataset.l === lang) a.classList.add('active');
+        });
+    });
+})();
+</script>
+</head>
+<body>
+<div class="container">
+
+    <div class="langbar"><a href="?lang=en" data-l="en" onclick="setLang('en');return false;">EN</a><a href="?lang=ru" data-l="ru" onclick="setLang('ru');return false;">RU</a></div>
+
+    <div class="l-en" lang="en">
+
+    <div class="header">
+        <div class="logo">🛡️</div>
+        <h1>SubAssist</h1>
+        <div class="subtitle">Privacy Policy</div>
+        <div class="updated">Last updated: October 24, 2026</div>
+    </div>
+
+    <p>
+        SubAssist ("we", "our", "the app") is developed by SubSave Studio
+        (<a class="contact-link" href="mailto:studio.subsave@gmail.com">studio.subsave@gmail.com</a>).
+        This Privacy Policy explains what data the app accesses, how it is used, and your rights.
+    </p>
+
+    <h2>1. Data We Access</h2>
+
+    <div class="card">
+        <h3>📁 Files and Media</h3>
+        <p>
+            SubAssist can read file metadata (names, sizes, modification dates) from your device storage
+            to perform storage audits — finding duplicates and large files.
+            <span class="highlight">Files are processed entirely on-device and never uploaded anywhere.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>📱 Installed Applications</h3>
+        <p>
+            The app reads the list of installed applications and their declared permissions
+            to generate a security audit report.
+            <span class="highlight">This data stays on your device.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🔔 Notifications (optional)</h3>
+        <p>
+            If you grant Notification Listener access, SubAssist reads the sending app and the
+            title and text of each incoming notification. This is done only in device memory, to match
+            them against a built-in list of subscription-related apps and keywords.
+            <span class="highlight">Notification content is never stored or transmitted.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>⏱ Usage Statistics (optional)</h3>
+        <p>
+            With your permission, the app reads Android UsageStats to show screen-time summaries.
+            <span class="highlight">This data is only displayed to you and never leaves your device.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🤖 AI Provider (optional)</h3>
+        <p>
+            If you choose a cloud AI provider (Gemini, Claude, OpenRouter), your chat messages
+            are sent to that provider's API. To give device-specific advice, the request also includes a short
+            device status summary: storage usage, battery level, temperature and charging state, and the number
+            of installed apps (no app names, files or personal identifiers). This happens only after you enable
+            "Send data to AI provider" in Settings → Privacy &amp; Access, and you can turn it off at any time.
+            We do not store these messages on our servers.
+            Please review the privacy policy of the AI provider you select.<br><br>
+            If you use the <span class="highlight">on-device Gemma model</span>, no data is sent anywhere.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>⬇️ On-device Model Download (optional)</h3>
+        <p>
+            If you choose the on-device Gemma model, the app downloads the model file from
+            <strong>huggingface.co</strong>. Hugging Face receives your IP address and technical request data, and
+            the access token only if you enter one for gated models.
+            <span class="highlight">No chat messages or device data are sent during the download, and after it
+            finishes the model runs fully offline.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🛡️ Fraud Shield — QR &amp; URL Scanning</h3>
+        <p>
+            When you scan a QR code, the app checks the URL against on-device heuristics and,
+            if configured, the <strong>Google Safe Browsing API</strong> to detect malicious or
+            phishing links. The scanned URL is sent to Google for this check; no other data
+            (device identifiers, personal information) is included.
+            <span class="highlight">Scan results are stored locally on your device.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>📶 Fraud Shield — Wi-Fi Network Protection (optional)</h3>
+        <p>
+            If you enable "Wi-Fi network protection" in Settings, SubAssist reads the name (SSID)
+            and identifier (BSSID) of the Wi-Fi network you connect to, to warn you about possible
+            spoofed access points ("evil-twin" attacks). Android requires precise location
+            permission to read this information, but
+            <span class="highlight">the app does not determine, store, or transmit your geographic location.</span>
+            This feature is off by default and only activates if you explicitly turn it on.
+        </p>
+    </div>
+
+    <h2>2. Data We Do NOT Collect</h2>
+    <ul>
+        <li>We do not collect personal information (name, email, phone number)</li>
+        <li>We do not use advertising SDKs or analytics trackers</li>
+        <li>We do not sell your data. Data is sent to third parties only to the services you choose or enable, as described in Sections 1 and 5</li>
+        <li>We do not store your files or media on any server</li>
+        <li>We do not use GPS or determine your geographic location. The optional Wi-Fi network protection feature only reads the Wi-Fi network name/identifier, not your coordinates (see Section 1)</li>
+    </ul>
+
+    <h2>3. API Keys</h2>
+    <p>
+        If you enter an API key for a cloud AI provider, it is stored locally on your device
+        in the app's private storage, encrypted with AES-256-GCM using a key held in the Android Keystore.
+        It is sent only to the provider it belongs to, over HTTPS, and is never transmitted to SubSave Studio's servers.
+    </p>
+
+    <h2>4. Permissions Explained</h2>
+    <ul>
+        <li><strong>READ_MEDIA_IMAGES / READ_MEDIA_VIDEO / READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE (Android 12 and lower) / WRITE_EXTERNAL_STORAGE (Android 10 and lower)</strong> — storage audit: listing file names, sizes and dates to find duplicates and large files</li>
+        <li><strong>PACKAGE_USAGE_STATS</strong> — screen time statistics (user must grant manually)</li>
+        <li><strong>BIND_NOTIFICATION_LISTENER_SERVICE</strong> — subscription detection via notifications (optional)</li>
+        <li><strong>INTERNET / ACCESS_NETWORK_STATE</strong> — cloud AI providers, Google Safe Browsing and the on-device model download</li>
+        <li><strong>POST_NOTIFICATIONS</strong> — local notifications, e.g. when the SubSave app becomes available on your device (only if you ask to be notified)</li>
+        <li><strong>RECEIVE_BOOT_COMPLETED</strong> — restores that optional notification request after the device restarts</li>
+        <li><strong>CAMERA</strong> — Fraud Shield QR code scanning</li>
+        <li><strong>ACCESS_WIFI_STATE</strong> — Fraud Shield Wi-Fi network protection (optional)</li>
+        <li><strong>ACCESS_FINE_LOCATION</strong> — required by Android to read the Wi-Fi network name for Fraud Shield's optional protection feature; not used to determine your location (user must enable manually in Settings)</li>
+    </ul>
+
+    <h2>5. Third-Party Services</h2>
+    <p>SubAssist may optionally connect to the following external AI APIs based on your choice:</p>
+    <ul>
+        <li><a class="contact-link" href="https://ai.google.dev/terms" target="_blank">Google Gemini API</a></li>
+        <li><a class="contact-link" href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropic Claude API</a></li>
+        <li><a class="contact-link" href="https://openrouter.ai/privacy" target="_blank">OpenRouter</a></li>
+        <li><a class="contact-link" href="https://policies.google.com/privacy" target="_blank">Google Safe Browsing</a> (Fraud Shield QR/URL scanning)</li>
+        <li><a class="contact-link" href="https://huggingface.co/privacy" target="_blank">Hugging Face</a> (one-time download of the on-device Gemma model)</li>
+    </ul>
+    <p>AI provider connections occur only when you send a message in the AI chat. Safe Browsing is contacted when you scan a QR code, and Hugging Face only when you download the model.</p>
+
+    <h2>6. Data Retention, Security and Deletion</h2>
+    <p>
+        Everything SubAssist stores (settings, scan history, known Wi-Fi networks, the encrypted API key and the
+        downloaded model) stays in the app's private storage on your device. We keep no copy and have no accounts.
+        You can delete all of it at any time by clearing the app's storage in Android Settings → Apps → SubAssist,
+        or by uninstalling the app. Network requests use HTTPS. Messages already sent to an AI provider are held by
+        that provider under its own policy, and we cannot delete them for you.
+    </p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>
+        SubAssist is not directed at children under 13. We do not knowingly collect
+        any information from children.
+    </p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>
+        We may update this policy from time to time. The updated version will always be
+        available at this URL. Continued use of the app after changes constitutes acceptance.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>
+        Questions about this Privacy Policy? Contact us at:<br>
+        <a class="contact-link" href="mailto:studio.subsave@gmail.com">studio.subsave@gmail.com</a>
+    </p>
+
+    <div class="footer">
+        © 2026 SubSave Studio · SubAssist · All rights reserved
+    </div>
+
+</div>
+
+    <div class="l-ru" lang="ru">
+    <div class="header">
+        <div class="logo">🛡️</div>
+        <h1>SubAssist</h1>
+        <div class="subtitle">Политика конфиденциальности</div>
+        <div class="updated">Последнее обновление: 24 октября 2026 г.</div>
+    </div>
+
+    <p>
+        SubAssist («мы», «наш», «приложение») разработано SubSave Studio
+        (<a class="contact-link" href="mailto:studio.subsave@gmail.com">studio.subsave@gmail.com</a>).
+        В этой Политике конфиденциальности объясняется, к каким данным обращается приложение, как они используются и какие у вас есть права.
+    </p>
+
+    <h2>1. Данные, к которым мы обращаемся</h2>
+
+    <div class="card">
+        <h3>📁 Файлы и медиа</h3>
+        <p>
+            SubAssist может читать метаданные файлов (названия, размеры, даты изменения) из памяти вашего устройства
+            для аудита хранилища — поиска дубликатов и крупных файлов.
+            <span class="highlight">Файлы обрабатываются полностью на устройстве и никуда не загружаются.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>📱 Установленные приложения</h3>
+        <p>
+            Приложение читает список установленных приложений и запрашиваемые ими разрешения
+            для формирования отчёта аудита безопасности.
+            <span class="highlight">Эти данные остаются на вашем устройстве.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🔔 Уведомления (необязательно)</h3>
+        <p>
+            Если вы предоставите доступ к уведомлениям, SubAssist читает приложение-отправитель,
+            заголовок и текст каждого входящего уведомления. Это происходит только в памяти устройства — чтобы сопоставить
+            их со встроенным списком приложений и ключевых слов, связанных с подписками.
+            <span class="highlight">Содержимое уведомлений не сохраняется и не передаётся.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>⏱ Статистика использования (необязательно)</h3>
+        <p>
+            С вашего разрешения приложение читает Android UsageStats, чтобы показывать сводки экранного времени.
+            <span class="highlight">Эти данные только отображаются вам и не покидают устройство.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🤖 Поставщик ИИ (необязательно)</h3>
+        <p>
+            Если вы выбираете облачного поставщика ИИ (Gemini, Claude, OpenRouter), ваши сообщения в чате
+            отправляются в API этого поставщика. Чтобы давать советы с учётом устройства, запрос также содержит краткую
+            сводку о состоянии устройства: заполненность хранилища, уровень заряда, температуру и состояние зарядки батареи,
+            а также количество установленных приложений (без названий приложений, файлов и личных идентификаторов).
+            Это происходит только после того, как вы включите «Передача данных AI-провайдеру»
+            в Настройки → Конфиденциальность и доступ, и вы можете отключить это в любой момент.
+            Мы не храним эти сообщения на своих серверах.
+            Ознакомьтесь с политикой конфиденциальности выбранного поставщика ИИ.<br><br>
+            Если вы используете <span class="highlight">модель Gemma на устройстве</span>, данные никуда не отправляются.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>⬇️ Загрузка модели на устройство (необязательно)</h3>
+        <p>
+            Если вы выбираете модель Gemma на устройстве, приложение скачивает файл модели с
+            <strong>huggingface.co</strong>. Hugging Face получает ваш IP-адрес и технические данные запроса,
+            а токен доступа — только если вы ввели его для закрытых моделей.
+            <span class="highlight">Во время загрузки сообщения чата и данные устройства не отправляются;
+            после загрузки модель работает полностью офлайн.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🛡️ Fraud Shield — проверка QR-кодов и ссылок</h3>
+        <p>
+            Когда вы сканируете QR-код, приложение проверяет ссылку локальными эвристиками и,
+            если настроено, через <strong>Google Safe Browsing API</strong>, чтобы выявить вредоносные или
+            фишинговые ссылки. Отсканированная ссылка отправляется в Google для проверки; никакие другие данные
+            (идентификаторы устройства, личная информация) не передаются.
+            <span class="highlight">Результаты сканирования хранятся локально на вашем устройстве.</span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>📶 Fraud Shield — защита Wi-Fi (необязательно)</h3>
+        <p>
+            Если вы включите «Защита Wi-Fi сетей» в Настройках, SubAssist читает название (SSID)
+            и идентификатор (BSSID) сети Wi-Fi, к которой вы подключены, чтобы предупредить о возможных
+            поддельных точках доступа («evil-twin»). Для чтения этой информации Android требует разрешение на
+            точное местоположение, однако
+            <span class="highlight">приложение не определяет, не сохраняет и не передаёт ваши географические координаты.</span>
+            Функция по умолчанию выключена и работает только если вы включите её сами.
+        </p>
+    </div>
+
+    <h2>2. Данные, которые мы НЕ собираем</h2>
+    <ul>
+        <li>Мы не собираем личную информацию (имя, адрес электронной почты, номер телефона)</li>
+        <li>Мы не используем рекламные SDK и аналитические трекеры</li>
+        <li>Мы не продаём ваши данные. Данные передаются третьим сторонам только выбранным или включённым вами сервисам, как описано в разделах 1 и 5</li>
+        <li>Мы не храним ваши файлы и медиа ни на каких серверах</li>
+        <li>Мы не используем GPS и не определяем ваше географическое положение. Необязательная защита Wi-Fi читает только название и идентификатор сети Wi-Fi, а не ваши координаты (см. раздел 1)</li>
+    </ul>
+
+    <h2>3. Ключи API</h2>
+    <p>
+        Если вы вводите ключ API облачного поставщика ИИ, он хранится локально на вашем устройстве
+        в закрытом хранилище приложения и шифруется алгоритмом AES-256-GCM с ключом, который находится в Android Keystore.
+        Он отправляется только тому поставщику, которому принадлежит, по HTTPS, и никогда не передаётся на серверы SubSave Studio.
+    </p>
+
+    <h2>4. Объяснение разрешений</h2>
+    <ul>
+        <li><strong>READ_MEDIA_IMAGES / READ_MEDIA_VIDEO / READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE (Android 12 и ниже) / WRITE_EXTERNAL_STORAGE (Android 10 и ниже)</strong> — аудит хранилища: просмотр названий, размеров и дат файлов для поиска дубликатов и крупных файлов</li>
+        <li><strong>PACKAGE_USAGE_STATS</strong> — статистика экранного времени (пользователь предоставляет вручную)</li>
+        <li><strong>BIND_NOTIFICATION_LISTENER_SERVICE</strong> — определение подписок по уведомлениям (необязательно)</li>
+        <li><strong>INTERNET / ACCESS_NETWORK_STATE</strong> — облачные поставщики ИИ, Google Safe Browsing и загрузка модели на устройство</li>
+        <li><strong>POST_NOTIFICATIONS</strong> — локальные уведомления, например о появлении приложения SubSave на вашем устройстве (только если вы попросили уведомить)</li>
+        <li><strong>RECEIVE_BOOT_COMPLETED</strong> — восстанавливает этот необязательный запрос на уведомление после перезагрузки устройства</li>
+        <li><strong>CAMERA</strong> — сканирование QR-кодов в Fraud Shield</li>
+        <li><strong>ACCESS_WIFI_STATE</strong> — защита Wi-Fi в Fraud Shield (необязательно)</li>
+        <li><strong>ACCESS_FINE_LOCATION</strong> — требуется Android для чтения названия сети Wi-Fi в необязательной защите Fraud Shield; не используется для определения вашего местоположения (пользователь включает вручную в Настройках)</li>
+    </ul>
+
+    <h2>5. Сторонние сервисы</h2>
+    <p>SubAssist может по вашему выбору подключаться к следующим внешним сервисам:</p>
+    <ul>
+        <li><a class="contact-link" href="https://ai.google.dev/terms" target="_blank">Google Gemini API</a></li>
+        <li><a class="contact-link" href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropic Claude API</a></li>
+        <li><a class="contact-link" href="https://openrouter.ai/privacy" target="_blank">OpenRouter</a></li>
+        <li><a class="contact-link" href="https://policies.google.com/privacy" target="_blank">Google Safe Browsing</a> (проверка QR-кодов и ссылок в Fraud Shield)</li>
+        <li><a class="contact-link" href="https://huggingface.co/privacy" target="_blank">Hugging Face</a> (однократная загрузка модели Gemma на устройство)</li>
+    </ul>
+    <p>Подключения к поставщикам ИИ происходят только когда вы отправляете сообщение в чате с ИИ. Safe Browsing используется при сканировании QR-кода, а Hugging Face — только при загрузке модели.</p>
+
+    <h2>6. Хранение, защита и удаление данных</h2>
+    <p>
+        Всё, что хранит SubAssist (настройки, история сканирований, известные сети Wi-Fi, зашифрованный ключ API
+        и загруженная модель), остаётся в закрытом хранилище приложения на вашем устройстве. Мы не храним копий и не используем учётные записи.
+        Вы можете удалить всё это в любой момент, очистив хранилище приложения в Настройки Android → Приложения → SubAssist,
+        или удалив приложение. Сетевые запросы выполняются по HTTPS. Сообщения, уже отправленные поставщику ИИ, хранятся
+        у этого поставщика по его собственной политике, и мы не можем удалить их за вас.
+    </p>
+
+    <h2>7. Конфиденциальность детей</h2>
+    <p>
+        SubAssist не предназначено для детей младше 13 лет. Мы не собираем намеренно
+        информацию о детях.
+    </p>
+
+    <h2>8. Изменения в этой политике</h2>
+    <p>
+        Мы можем время от времени обновлять эту политику. Актуальная версия всегда
+        доступна по этому адресу. Продолжение использования приложения после изменений означает согласие с ними.
+    </p>
+
+    <h2>9. Контакты</h2>
+    <p>
+        Вопросы по этой Политике конфиденциальности? Напишите нам:<br>
+        <a class="contact-link" href="mailto:studio.subsave@gmail.com">studio.subsave@gmail.com</a>
+    </p>
+
+    <div class="footer">
+        © 2026 SubSave Studio · SubAssist · Все права защищены
+    </div>
+</div>
+
+</div>
+</body>
+</html>
