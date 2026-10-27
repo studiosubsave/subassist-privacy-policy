@@ -106,7 +106,7 @@
         <div class="logo">🛡️</div>
         <h1>SubAssist</h1>
         <div class="subtitle">Privacy Policy</div>
-        <div class="updated">Last updated: October 24, 2026</div>
+        <div class="updated">Last updated: October 27, 2026</div>
     </div>
 
     <p>
@@ -121,7 +121,11 @@
         <h3>📁 Files and Media</h3>
         <p>
             SubAssist can read file metadata (names, sizes, modification dates) from your device storage
-            to perform storage audits — finding duplicates and large files.
+            to perform storage audits — finding duplicates and large files. To find exact duplicates, it also
+            computes a checksum of the content of files of the same size, on your device.
+            If you use "Orphaned data", the app reads the names, sizes and dates of the folders inside the
+            folder you pick in the system file picker (Android or Android/media), and deletes a folder only after
+            you select it and confirm.
             <span class="highlight">Files are processed entirely on-device and never uploaded anywhere.</span>
         </p>
     </div>
@@ -181,10 +185,10 @@
     <div class="card">
         <h3>🛡️ Fraud Shield — QR &amp; URL Scanning</h3>
         <p>
-            When you scan a QR code, the app checks the URL against on-device heuristics and,
-            if configured, the <strong>Google Safe Browsing API</strong> to detect malicious or
-            phishing links. The scanned URL is sent to Google for this check; no other data
-            (device identifiers, personal information) is included.
+            When you scan a QR code, the app checks the link with rules that run on your device
+            (look-alike brand names, IP addresses, suspicious domain endings, mixed alphabets, and similar).
+            <span class="highlight">The scanned link is not sent to any server.</span>
+            This check cannot guarantee that a link is safe.
             <span class="highlight">Scan results are stored locally on your device.</span>
         </p>
     </div>
@@ -222,7 +226,7 @@
         <li><strong>READ_MEDIA_IMAGES / READ_MEDIA_VIDEO / READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE (Android 12 and lower) / WRITE_EXTERNAL_STORAGE (Android 10 and lower)</strong> — storage audit: listing file names, sizes and dates to find duplicates and large files</li>
         <li><strong>PACKAGE_USAGE_STATS</strong> — screen time statistics (user must grant manually)</li>
         <li><strong>BIND_NOTIFICATION_LISTENER_SERVICE</strong> — subscription detection via notifications (optional)</li>
-        <li><strong>INTERNET / ACCESS_NETWORK_STATE</strong> — cloud AI providers, Google Safe Browsing and the on-device model download</li>
+        <li><strong>INTERNET / ACCESS_NETWORK_STATE</strong> — cloud AI providers and the on-device model download</li>
         <li><strong>POST_NOTIFICATIONS</strong> — local notifications, e.g. when the SubSave app becomes available on your device (only if you ask to be notified)</li>
         <li><strong>RECEIVE_BOOT_COMPLETED</strong> — restores that optional notification request after the device restarts</li>
         <li><strong>CAMERA</strong> — Fraud Shield QR code scanning</li>
@@ -236,10 +240,9 @@
         <li><a class="contact-link" href="https://ai.google.dev/terms" target="_blank">Google Gemini API</a></li>
         <li><a class="contact-link" href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropic Claude API</a></li>
         <li><a class="contact-link" href="https://openrouter.ai/privacy" target="_blank">OpenRouter</a></li>
-        <li><a class="contact-link" href="https://policies.google.com/privacy" target="_blank">Google Safe Browsing</a> (Fraud Shield QR/URL scanning)</li>
         <li><a class="contact-link" href="https://huggingface.co/privacy" target="_blank">Hugging Face</a> (one-time download of the on-device Gemma model)</li>
     </ul>
-    <p>AI provider connections occur only when you send a message in the AI chat. Safe Browsing is contacted when you scan a QR code, and Hugging Face only when you download the model.</p>
+    <p>AI provider connections occur only when you send a message in the AI chat, and Hugging Face only when you download the model.</p>
 
     <h2>6. Data Retention, Security and Deletion</h2>
     <p>
@@ -279,7 +282,7 @@
         <div class="logo">🛡️</div>
         <h1>SubAssist</h1>
         <div class="subtitle">Политика конфиденциальности</div>
-        <div class="updated">Последнее обновление: 24 октября 2026 г.</div>
+        <div class="updated">Последнее обновление: 27 октября 2026 г.</div>
     </div>
 
     <p>
@@ -294,7 +297,11 @@
         <h3>📁 Файлы и медиа</h3>
         <p>
             SubAssist может читать метаданные файлов (названия, размеры, даты изменения) из памяти вашего устройства
-            для аудита хранилища — поиска дубликатов и крупных файлов.
+            для аудита хранилища — поиска дубликатов и крупных файлов. Чтобы найти точные дубликаты, приложение
+            также вычисляет контрольную сумму содержимого файлов одинакового размера — на вашем устройстве.
+            Если вы используете «Осиротевшие данные», приложение читает названия, размеры и даты папок внутри
+            папки, которую вы выбрали в системном окне выбора (Android или Android/media), и удаляет папку только
+            после того, как вы её отметите и подтвердите удаление.
             <span class="highlight">Файлы обрабатываются полностью на устройстве и никуда не загружаются.</span>
         </p>
     </div>
@@ -355,10 +362,10 @@
     <div class="card">
         <h3>🛡️ Fraud Shield — проверка QR-кодов и ссылок</h3>
         <p>
-            Когда вы сканируете QR-код, приложение проверяет ссылку локальными эвристиками и,
-            если настроено, через <strong>Google Safe Browsing API</strong>, чтобы выявить вредоносные или
-            фишинговые ссылки. Отсканированная ссылка отправляется в Google для проверки; никакие другие данные
-            (идентификаторы устройства, личная информация) не передаются.
+            Когда вы сканируете QR-код, приложение проверяет ссылку правилами, которые работают на вашем устройстве
+            (подделка названий брендов, IP-адреса, подозрительные окончания доменов, смешение алфавитов и т. п.).
+            <span class="highlight">Отсканированная ссылка не отправляется ни на какой сервер.</span>
+            Такая проверка не может гарантировать, что ссылка безопасна.
             <span class="highlight">Результаты сканирования хранятся локально на вашем устройстве.</span>
         </p>
     </div>
@@ -396,7 +403,7 @@
         <li><strong>READ_MEDIA_IMAGES / READ_MEDIA_VIDEO / READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE (Android 12 и ниже) / WRITE_EXTERNAL_STORAGE (Android 10 и ниже)</strong> — аудит хранилища: просмотр названий, размеров и дат файлов для поиска дубликатов и крупных файлов</li>
         <li><strong>PACKAGE_USAGE_STATS</strong> — статистика экранного времени (пользователь предоставляет вручную)</li>
         <li><strong>BIND_NOTIFICATION_LISTENER_SERVICE</strong> — определение подписок по уведомлениям (необязательно)</li>
-        <li><strong>INTERNET / ACCESS_NETWORK_STATE</strong> — облачные поставщики ИИ, Google Safe Browsing и загрузка модели на устройство</li>
+        <li><strong>INTERNET / ACCESS_NETWORK_STATE</strong> — облачные поставщики ИИ и загрузка модели на устройство</li>
         <li><strong>POST_NOTIFICATIONS</strong> — локальные уведомления, например о появлении приложения SubSave на вашем устройстве (только если вы попросили уведомить)</li>
         <li><strong>RECEIVE_BOOT_COMPLETED</strong> — восстанавливает этот необязательный запрос на уведомление после перезагрузки устройства</li>
         <li><strong>CAMERA</strong> — сканирование QR-кодов в Fraud Shield</li>
@@ -410,10 +417,9 @@
         <li><a class="contact-link" href="https://ai.google.dev/terms" target="_blank">Google Gemini API</a></li>
         <li><a class="contact-link" href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropic Claude API</a></li>
         <li><a class="contact-link" href="https://openrouter.ai/privacy" target="_blank">OpenRouter</a></li>
-        <li><a class="contact-link" href="https://policies.google.com/privacy" target="_blank">Google Safe Browsing</a> (проверка QR-кодов и ссылок в Fraud Shield)</li>
         <li><a class="contact-link" href="https://huggingface.co/privacy" target="_blank">Hugging Face</a> (однократная загрузка модели Gemma на устройство)</li>
     </ul>
-    <p>Подключения к поставщикам ИИ происходят только когда вы отправляете сообщение в чате с ИИ. Safe Browsing используется при сканировании QR-кода, а Hugging Face — только при загрузке модели.</p>
+    <p>Подключения к поставщикам ИИ происходят только когда вы отправляете сообщение в чате с ИИ, а к Hugging Face — только при загрузке модели.</p>
 
     <h2>6. Хранение, защита и удаление данных</h2>
     <p>
