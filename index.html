@@ -188,6 +188,8 @@
             When you scan a QR code, the app checks the link with rules that run on your device
             (look-alike brand names, IP addresses, suspicious domain endings, mixed alphabets, and similar).
             <span class="highlight">The scanned link is not sent to any server.</span>
+            The same check is used for a link that you paste into "Check a link" or share to SubAssist from another
+            app (the text you share is read only for that purpose and only on your device).
             This check cannot guarantee that a link is safe.
             <span class="highlight">Scan results are stored locally on your device.</span>
         </p>
@@ -202,6 +204,18 @@
             permission to read this information, but
             <span class="highlight">the app does not determine, store, or transmit your geographic location.</span>
             This feature is off by default and only activates if you explicitly turn it on.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🔍 Device check</h3>
+        <p>
+            The "Device check" screen reads, on your device only, whether a screen lock is set, the date of the
+            Android security patch, whether USB debugging is on, and what type of protection the Wi-Fi network you are
+            connected to has (open, WEP, WPA2, WPA3; the name of the network is not read). Only if you have turned on "Analyse installed apps",
+            it also reads the names of the apps that have accessibility-service, notification-access or
+            device-administrator access.
+            <span class="highlight">This information is shown to you only; it is not stored or sent anywhere.</span>
         </p>
     </div>
 
@@ -365,6 +379,9 @@
             Когда вы сканируете QR-код, приложение проверяет ссылку правилами, которые работают на вашем устройстве
             (подделка названий брендов, IP-адреса, подозрительные окончания доменов, смешение алфавитов и т. п.).
             <span class="highlight">Отсканированная ссылка не отправляется ни на какой сервер.</span>
+            Так же проверяется ссылка, которую вы вставили в «Проверить ссылку» или отправили в SubAssist из другого
+            приложения через меню «Поделиться» (текст, которым вы делитесь, читается только для этого и только на
+            вашем устройстве).
             Такая проверка не может гарантировать, что ссылка безопасна.
             <span class="highlight">Результаты сканирования хранятся локально на вашем устройстве.</span>
         </p>
@@ -379,6 +396,18 @@
             точное местоположение, однако
             <span class="highlight">приложение не определяет, не сохраняет и не передаёт ваши географические координаты.</span>
             Функция по умолчанию выключена и работает только если вы включите её сами.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🔍 Проверка устройства</h3>
+        <p>
+            Экран «Проверка устройства» читает только на вашем устройстве: установлена ли блокировка экрана, дату
+            обновления безопасности Android, включена ли отладка по USB и какой тип защиты у сети Wi-Fi, к которой вы
+            подключены (открытая, WEP, WPA2, WPA3; название сети не читается). Только если вы включили «Анализ установленных
+            приложений», он также читает названия приложений, у которых есть доступ через службы специальных
+            возможностей, доступ к уведомлениям или права администратора устройства.
+            <span class="highlight">Эти сведения показываются только вам; они не сохраняются и никуда не отправляются.</span>
         </p>
     </div>
 
